@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DropDown : MonoBehaviour
+public class gRPCUiManager : MonoBehaviour
 {
-    private Dropdown dropdown;
     private HelloClient helloClient;
+    private Dropdown dropdown;
 
     private async Task Start()
     {

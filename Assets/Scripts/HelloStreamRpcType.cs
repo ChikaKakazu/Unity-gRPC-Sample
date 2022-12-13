@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum HelloStreamRpcType
 {
-    Unary = 1,
+    Unary,
     ServerStreaming,
     ClientStreaming,
     BidirectionalStreaming,
