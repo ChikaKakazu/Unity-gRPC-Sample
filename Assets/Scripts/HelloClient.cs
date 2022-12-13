@@ -4,16 +4,8 @@ using Grpc.Sample;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-public class HelloClient : MonoBehaviour
+public class HelloClient
 {
-    void Start()
-    {
-        Debug.Log("ƒeƒXƒg");
-        Hello();
-        //HelloServerStream();
-        //HelloClientStream();
-        //HelloBiStreams();
-    }
 
     public void Hello()
     {
@@ -28,7 +20,7 @@ public class HelloClient : MonoBehaviour
         Debug.Log(replay.Message);
     }
 
-    public async void HelloServerStream()
+    public async Task HelloServerStream()
     {
         Channel channel = new Channel("localhost:8080", ChannelCredentials.Insecure);
 
@@ -46,7 +38,7 @@ public class HelloClient : MonoBehaviour
         channel.ShutdownAsync().Wait();
     }
 
-    public async void HelloClientStream()
+    public async Task HelloClientStream()
     {
         Channel channel = new Channel("localhost:8080", ChannelCredentials.Insecure);
 
@@ -72,7 +64,7 @@ public class HelloClient : MonoBehaviour
         channel.ShutdownAsync().Wait();
     }
 
-    public async void HelloBiStreams()
+    public async Task HelloBiStreams()
     {
         Channel channel = new Channel("localhost:8080", ChannelCredentials.Insecure);
 
